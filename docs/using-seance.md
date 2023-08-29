@@ -40,7 +40,7 @@ For this example we are going to analyse four soil samples from a survey of nema
 ```
 wget ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByRun/sra/SRR/SRR522/SRR522901/SRR522901.sra
 fastq-dump SRR522901.sra
-wget https://github.com/ariloytynoja/seance/blob/master/files/tutorial_files/porazinska_demultiplex.py
+wget https://raw.githubusercontent.com/ariloytynoja/seance/main/files/tutorial_files/porazinska_demultiplex.py
 python porazinska_demultiplex.py
 ```
 
@@ -54,7 +54,7 @@ soil_data/SRR522901_soil3.fastq:16319
 soil_data/SRR522901_soil4.fastq:16170
 ```
 
-(Alternatively, just download the data from [here](https://github.com/ariloytynoja/seance/blob/master/files/tutorial_files/soil_data.tar.gz)).
+(Alternatively, just download the data from [here](https://github.com/ariloytynoja/seance/raw/main/files/tutorial_files/soil_data.tar.gz)).
 
 ### Data preprocessing
 
@@ -106,7 +106,7 @@ The cluster subcommand generates two files: ```soil_out/seance.cluster.fasta``` 
 Whilst all the count data is stored in the BIOM file format, the count data can also be accessed using the showcounts commands. By default the output is tab separated, but the user can specify the delimiter character (```--delimiter```) to generate a comma separated value file, for example.
 
 ```
-seance showcounts --outdir soil_out > tab\_separated.txt
+seance showcounts --outdir soil_out > tab_separated.txt
 seance showcounts --outdir soil_out --delimiter ',' > comma_separated.txt
 ```
 
@@ -151,8 +151,8 @@ Séance supports reference-based phylogenetic analysis using Pagan’s phylogene
 Download the example reference tree and alignment:
 
 ```
-curl -O https://github.com/ariloytynoja/seance/blob/master/files/18S_nematode_reference/SSU_reference_l5_Silva.fasta
-curl -O https://github.com/ariloytynoja/seance/blob/master/files/18S_nematode_reference/SSU_reference_l5_Silva.tree
+curl -O https://raw.githubusercontent.com/ariloytynoja/seance/main/files/18S_nematode_reference/SSU_reference_l5_Silva.fasta
+curl -O https://raw.githubusercontent.com/ariloytynoja/seance/main/files/18S_nematode_reference/SSU_reference_l5_Silva.tree
 ```
 
 Run the phylogenetic placement:
@@ -193,4 +193,4 @@ There are many options for generating heatmaps, in this final example we do not 
 seance heatmap --outdir soil_out --labelclip nematoda --ladderise
 ```
 
-![](https://github.com/ariloytynoja/seance/blob/master/files/tutorial_files/porazinska_nematoda_thumbnail.png)
+![](https://raw.githubusercontent.com/ariloytynoja/seance/main/files/tutorial_files/porazinska_nematoda_thumbnail.png)
