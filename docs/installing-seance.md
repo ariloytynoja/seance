@@ -14,9 +14,9 @@ Séance builds on multiple applications and python libraries to provide a comple
 Get the source distribution, untar it and cd into it:
 
 ```
-curl -O https://github.com/ariloytynoja/seance/blob/master/files/Seance-0.11.tar.gz
-tar xf Seance-0.11.tar.gz
-cd Seance-0.11/
+wget https://github.com/ariloytynoja/seance/raw/main/files/Seance-0.12.tar.gz
+tar xf Seance-0.12.tar.gz
+cd Seance-0.12/
 ```
 
 One of the python modules requires libffi, which is not handled by pip properly (at time of writing). The workaround for Ubuntu/Debian is to just install it manually using apt:  
@@ -41,7 +41,7 @@ seance test
 Here is an example of what you should see:
 
 ```
-ajm@leviathan:~/Seance-0.11$ seance test
+ajm@leviathan:~/Seance-0.12$ seance test
 checking system for cluster command dependancies :
     pagan found.
     blastn (needed for --label) not found!
